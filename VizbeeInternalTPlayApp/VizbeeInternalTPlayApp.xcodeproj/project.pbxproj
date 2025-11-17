@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58DB2F792EC23DAB00F7FFA0 /* VizbeeHomeOSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */; };
+		58DB2F7B2EC23DAB00F7FFA0 /* GoogleCast in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */; };
+		58DB2F8A2EC2654A00F7FFA0 /* VizbeeTPlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */; };
+		58DB302B2EC26D6900F7FFA0 /* VizbeeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB302A2EC26D6900F7FFA0 /* VizbeeKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58DB2F3B2EC2263B00F7FFA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58DB2F252EC2263900F7FFA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58DB2F2C2EC2263900F7FFA0;
+			remoteInfo = VizbeeInternalTPlayApp;
+		};
+		58DB2F452EC2263B00F7FFA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58DB2F252EC2263900F7FFA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58DB2F2C2EC2263900F7FFA0;
+			remoteInfo = VizbeeInternalTPlayApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58DB2F2D2EC2263900F7FFA0 /* VizbeeInternalTPlayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizbeeInternalTPlayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58DB2F3A2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizbeeInternalTPlayAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58DB2F442EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizbeeInternalTPlayAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		58DB31782ECB365A00F7FFA0 /* Exceptions for "VizbeeInternalTPlayApp" folder in "VizbeeInternalTPlayApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 58DB2F2C2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		58DB2F2F2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				58DB31782ECB365A00F7FFA0 /* Exceptions for "VizbeeInternalTPlayApp" folder in "VizbeeInternalTPlayApp" target */,
+			);
+			path = VizbeeInternalTPlayApp;
+			sourceTree = "<group>";
+		};
+		58DB2F3D2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VizbeeInternalTPlayAppTests;
+			sourceTree = "<group>";
+		};
+		58DB2F472EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VizbeeInternalTPlayAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58DB2F2A2EC2263900F7FFA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58DB2F7B2EC23DAB00F7FFA0 /* GoogleCast in Frameworks */,
+				58DB2F8A2EC2654A00F7FFA0 /* VizbeeTPlayKit in Frameworks */,
+				58DB302B2EC26D6900F7FFA0 /* VizbeeKit in Frameworks */,
+				58DB2F792EC23DAB00F7FFA0 /* VizbeeHomeOSKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DB2F372EC2263B00F7FFA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DB2F412EC2263B00F7FFA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58DB2F242EC2263900F7FFA0 = {
+			isa = PBXGroup;
+			children = (
+				58DB2F2F2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */,
+				58DB2F3D2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests */,
+				58DB2F472EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests */,
+				58DB2F752EC23DAB00F7FFA0 /* Frameworks */,
+				58DB2F2E2EC2263900F7FFA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58DB2F2E2EC2263900F7FFA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58DB2F2D2EC2263900F7FFA0 /* VizbeeInternalTPlayApp.app */,
+				58DB2F3A2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests.xctest */,
+				58DB2F442EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58DB2F752EC23DAB00F7FFA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58DB2F2C2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58DB2F4E2EC2263B00F7FFA0 /* Build configuration list for PBXNativeTarget "VizbeeInternalTPlayApp" */;
+			buildPhases = (
+				58DB2F292EC2263900F7FFA0 /* Sources */,
+				58DB2F2A2EC2263900F7FFA0 /* Frameworks */,
+				58DB2F2B2EC2263900F7FFA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				58DB2F2F2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */,
+			);
+			name = VizbeeInternalTPlayApp;
+			packageProductDependencies = (
+				58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */,
+				58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */,
+				58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */,
+				58DB302A2EC26D6900F7FFA0 /* VizbeeKit */,
+			);
+			productName = VizbeeInternalTPlayApp;
+			productReference = 58DB2F2D2EC2263900F7FFA0 /* VizbeeInternalTPlayApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58DB2F392EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58DB2F512EC2263B00F7FFA0 /* Build configuration list for PBXNativeTarget "VizbeeInternalTPlayAppTests" */;
+			buildPhases = (
+				58DB2F362EC2263B00F7FFA0 /* Sources */,
+				58DB2F372EC2263B00F7FFA0 /* Frameworks */,
+				58DB2F382EC2263B00F7FFA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58DB2F3C2EC2263B00F7FFA0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				58DB2F3D2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests */,
+			);
+			name = VizbeeInternalTPlayAppTests;
+			packageProductDependencies = (
+			);
+			productName = VizbeeInternalTPlayAppTests;
+			productReference = 58DB2F3A2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58DB2F432EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58DB2F542EC2263B00F7FFA0 /* Build configuration list for PBXNativeTarget "VizbeeInternalTPlayAppUITests" */;
+			buildPhases = (
+				58DB2F402EC2263B00F7FFA0 /* Sources */,
+				58DB2F412EC2263B00F7FFA0 /* Frameworks */,
+				58DB2F422EC2263B00F7FFA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58DB2F462EC2263B00F7FFA0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				58DB2F472EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests */,
+			);
+			name = VizbeeInternalTPlayAppUITests;
+			packageProductDependencies = (
+			);
+			productName = VizbeeInternalTPlayAppUITests;
+			productReference = 58DB2F442EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58DB2F252EC2263900F7FFA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					58DB2F2C2EC2263900F7FFA0 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					58DB2F392EC2263B00F7FFA0 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 58DB2F2C2EC2263900F7FFA0;
+					};
+					58DB2F432EC2263B00F7FFA0 = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 58DB2F2C2EC2263900F7FFA0;
+					};
+				};
+			};
+			buildConfigurationList = 58DB2F282EC2263900F7FFA0 /* Build configuration list for PBXProject "VizbeeInternalTPlayApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58DB2F242EC2263900F7FFA0;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				58DB2F722EC23AD100F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */,
+				58DB2F732EC23AE400F7FFA0 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */,
+				58DB2F882EC2652C00F7FFA0 /* XCLocalSwiftPackageReference "../../vizbee-tplay-sdk" */,
+				58DB30292EC26D5B00F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 58DB2F2E2EC2263900F7FFA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58DB2F2C2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */,
+				58DB2F392EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests */,
+				58DB2F432EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58DB2F2B2EC2263900F7FFA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DB2F382EC2263B00F7FFA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DB2F422EC2263B00F7FFA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58DB2F292EC2263900F7FFA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DB2F362EC2263B00F7FFA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58DB2F402EC2263B00F7FFA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58DB2F3C2EC2263B00F7FFA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58DB2F2C2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */;
+			targetProxy = 58DB2F3B2EC2263B00F7FFA0 /* PBXContainerItemProxy */;
+		};
+		58DB2F462EC2263B00F7FFA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58DB2F2C2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */;
+			targetProxy = 58DB2F452EC2263B00F7FFA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		58DB2F4C2EC2263B00F7FFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		58DB2F4D2EC2263B00F7FFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58DB2F4F2EC2263B00F7FFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = VizbeeInternalTPlayApp/VizbeeInternalTPlayApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VizbeeInternalTPlayApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vizbee TPlay";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "TPlay app enables you to cast videos to Roku, FireTV, Samsung and other streaming devices on your home network.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.VizbeeInternalTPlayApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		58DB2F502EC2263B00F7FFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = VizbeeInternalTPlayApp/VizbeeInternalTPlayApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VizbeeInternalTPlayApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vizbee TPlay";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "TPlay app enables you to cast videos to Roku, FireTV, Samsung and other streaming devices on your home network.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.VizbeeInternalTPlayApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		58DB2F522EC2263B00F7FFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.VizbeeInternalTPlayAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizbeeInternalTPlayApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VizbeeInternalTPlayApp";
+			};
+			name = Debug;
+		};
+		58DB2F532EC2263B00F7FFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.VizbeeInternalTPlayAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VizbeeInternalTPlayApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VizbeeInternalTPlayApp";
+			};
+			name = Release;
+		};
+		58DB2F552EC2263B00F7FFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.VizbeeInternalTPlayAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VizbeeInternalTPlayApp;
+			};
+			name = Debug;
+		};
+		58DB2F562EC2263B00F7FFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.VizbeeInternalTPlayAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VizbeeInternalTPlayApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58DB2F282EC2263900F7FFA0 /* Build configuration list for PBXProject "VizbeeInternalTPlayApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58DB2F4C2EC2263B00F7FFA0 /* Debug */,
+				58DB2F4D2EC2263B00F7FFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58DB2F4E2EC2263B00F7FFA0 /* Build configuration list for PBXNativeTarget "VizbeeInternalTPlayApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58DB2F4F2EC2263B00F7FFA0 /* Debug */,
+				58DB2F502EC2263B00F7FFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58DB2F512EC2263B00F7FFA0 /* Build configuration list for PBXNativeTarget "VizbeeInternalTPlayAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58DB2F522EC2263B00F7FFA0 /* Debug */,
+				58DB2F532EC2263B00F7FFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58DB2F542EC2263B00F7FFA0 /* Build configuration list for PBXNativeTarget "VizbeeInternalTPlayAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58DB2F552EC2263B00F7FFA0 /* Debug */,
+				58DB2F562EC2263B00F7FFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		58DB2F882EC2652C00F7FFA0 /* XCLocalSwiftPackageReference "../../vizbee-tplay-sdk" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../vizbee-tplay-sdk";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		58DB2F722EC23AD100F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/vizbee-homeos-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		58DB2F732EC23AE400F7FFA0 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/google-cast-sdk-m1";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.8.0;
+			};
+		};
+		58DB30292EC26D5B00F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/vizbee-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DB2F722EC23AD100F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */;
+			productName = VizbeeHomeOSKit;
+		};
+		58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DB2F732EC23AE400F7FFA0 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */;
+			productName = GoogleCast;
+		};
+		58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DB2F882EC2652C00F7FFA0 /* XCLocalSwiftPackageReference "../../vizbee-tplay-sdk" */;
+			productName = VizbeeTPlayKit;
+		};
+		58DB302A2EC26D6900F7FFA0 /* VizbeeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 58DB30292EC26D5B00F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */;
+			productName = VizbeeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 58DB2F252EC2263900F7FFA0 /* Project object */;
+}
