@@ -12,8 +12,8 @@ A SwiftUI-based iOS application that displays a list of videos from various stre
 
 ## Requirements
 
-- iOS 15.0+
-- Xcode 14.0+
+- iOS 16.0+
+- Xcode 15.0+
 - Swift 5.7+
 - VizbeeTPlay SDK (VizbeeKit framework)
 
@@ -23,7 +23,7 @@ A SwiftUI-based iOS application that displays a list of videos from various stre
 
 You need to add the VizbeeTPlay framework to your project:
 
-1. Download or obtain the VizbeeKit.xcframework
+1. Download or obtain the VizbeeTPlayKit.xcframework
 2. In Xcode, go to your target's **General** tab
 3. Under **Frameworks, Libraries, and Embedded Content**, click the **+** button
 4. Add the VizbeeKit.xcframework

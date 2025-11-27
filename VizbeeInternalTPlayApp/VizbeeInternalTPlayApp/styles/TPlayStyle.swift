@@ -234,6 +234,18 @@ class TPlayStyle: NSObject {
                     "showsTouchWhenHighlighted" : true
                 ],
                 
+                "OverlayCallToActionButton" : [
+                    "cornerRadius" : 31,
+                    "font" : [
+                        "name" : "@primaryFont",
+                        "style": "body"
+                    ],
+                    "textTransform": NSNull(),
+                    "backgroundColor" : "@secondaryColor",
+                    "margin" : [20.0, 72.0, 20.0, 72.0],
+                    "showsTouchWhenHighlighted" : true
+                ],
+                
                 "UISlider" : [
                     "useCircleThumbControl" : true,
                     "circleThumbDiameter" : 16,
