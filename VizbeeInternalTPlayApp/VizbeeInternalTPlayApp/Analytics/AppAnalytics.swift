@@ -16,12 +16,12 @@ class AppAnalytics: VTPAnalyticsListener {
 
     /// Registers this instance to start receiving analytics events.
     func startListening() {
-        VizbeeTPlay.shared.analyticsManager.addListener(self)
+        VizbeeTPlay.shared.analyticsManager?.addListener(self)
     }
 
     /// Unregisters this instance to stop receiving analytics events.
     func stopListening() {
-        VizbeeTPlay.shared.analyticsManager.removeListener(self)
+        VizbeeTPlay.shared.analyticsManager?.removeListener(self)
     }
 
     // MARK: - VTPAnalyticsListener
