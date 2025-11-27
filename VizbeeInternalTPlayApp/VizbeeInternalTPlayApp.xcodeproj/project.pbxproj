@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		586E451A2ED836D400C8A6F4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 586E45192ED836D400C8A6F4 /* README.md */; };
 		58DB2F792EC23DAB00F7FFA0 /* VizbeeHomeOSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */; };
 		58DB2F7B2EC23DAB00F7FFA0 /* GoogleCast in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */; };
 		58DB2F8A2EC2654A00F7FFA0 /* VizbeeTPlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		586E45192ED836D400C8A6F4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		58DB2F2D2EC2263900F7FFA0 /* VizbeeInternalTPlayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VizbeeInternalTPlayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DB2F3A2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizbeeInternalTPlayAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DB2F442EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VizbeeInternalTPlayAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 		58DB2F242EC2263900F7FFA0 = {
 			isa = PBXGroup;
 			children = (
+				586E45192ED836D400C8A6F4 /* README.md */,
 				58DB2F2F2EC2263900F7FFA0 /* VizbeeInternalTPlayApp */,
 				58DB2F3D2EC2263B00F7FFA0 /* VizbeeInternalTPlayAppTests */,
 				58DB2F472EC2263B00F7FFA0 /* VizbeeInternalTPlayAppUITests */,
@@ -254,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586E451A2ED836D400C8A6F4 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
