@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58DB2F792EC23DAB00F7FFA0 /* VizbeeHomeOSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */; };
-		58DB2F7B2EC23DAB00F7FFA0 /* GoogleCast in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */; };
+		586E45222ED854C100C8A6F4 /* VizbeeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45212ED854C100C8A6F4 /* VizbeeKit */; };
+		586E45242ED854C100C8A6F4 /* VizbeeHomeOSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45232ED854C100C8A6F4 /* VizbeeHomeOSKit */; };
+		586E45262ED854C100C8A6F4 /* GoogleCast in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45252ED854C100C8A6F4 /* GoogleCast */; };
 		58DB2F8A2EC2654A00F7FFA0 /* VizbeeTPlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */; };
-		58DB302B2EC26D6900F7FFA0 /* VizbeeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58DB302A2EC26D6900F7FFA0 /* VizbeeKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,10 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DB2F7B2EC23DAB00F7FFA0 /* GoogleCast in Frameworks */,
+				586E45222ED854C100C8A6F4 /* VizbeeKit in Frameworks */,
+				586E45242ED854C100C8A6F4 /* VizbeeHomeOSKit in Frameworks */,
+				586E45262ED854C100C8A6F4 /* GoogleCast in Frameworks */,
 				58DB2F8A2EC2654A00F7FFA0 /* VizbeeTPlayKit in Frameworks */,
-				58DB302B2EC26D6900F7FFA0 /* VizbeeKit in Frameworks */,
-				58DB2F792EC23DAB00F7FFA0 /* VizbeeHomeOSKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +144,10 @@
 			);
 			name = VizbeeInternalTPlayApp;
 			packageProductDependencies = (
-				58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */,
-				58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */,
 				58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */,
-				58DB302A2EC26D6900F7FFA0 /* VizbeeKit */,
+				586E45212ED854C100C8A6F4 /* VizbeeKit */,
+				586E45232ED854C100C8A6F4 /* VizbeeHomeOSKit */,
+				586E45252ED854C100C8A6F4 /* GoogleCast */,
 			);
 			productName = VizbeeInternalTPlayApp;
 			productReference = 58DB2F2D2EC2263900F7FFA0 /* VizbeeInternalTPlayApp.app */;
@@ -232,10 +232,10 @@
 			mainGroup = 58DB2F242EC2263900F7FFA0;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				58DB2F722EC23AD100F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */,
-				58DB2F732EC23AE400F7FFA0 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */,
 				58DB2F882EC2652C00F7FFA0 /* XCLocalSwiftPackageReference "../../vizbee-tplay-sdk" */,
-				58DB30292EC26D5B00F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */,
+				586E451B2ED847D700C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */,
+				586E451C2ED8482400C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */,
+				586E451D2ED8482B00C8A6F4 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 58DB2F2E2EC2263900F7FFA0 /* Products */;
@@ -641,23 +641,7 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		58DB2F722EC23AD100F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ClaspTV/vizbee-homeos-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.3;
-			};
-		};
-		58DB2F732EC23AE400F7FFA0 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ClaspTV/google-cast-sdk-m1";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.8.0;
-			};
-		};
-		58DB30292EC26D5B00F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */ = {
+		586E451B2ED847D700C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ClaspTV/vizbee-ios-sdk";
 			requirement = {
@@ -665,28 +649,44 @@
 				minimumVersion = 6.8.4;
 			};
 		};
+		586E451C2ED8482400C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/vizbee-homeos-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		586E451D2ED8482B00C8A6F4 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/google-cast-sdk-m1";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.8.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		58DB2F782EC23DAB00F7FFA0 /* VizbeeHomeOSKit */ = {
+		586E45212ED854C100C8A6F4 /* VizbeeKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 58DB2F722EC23AD100F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */;
+			package = 586E451B2ED847D700C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */;
+			productName = VizbeeKit;
+		};
+		586E45232ED854C100C8A6F4 /* VizbeeHomeOSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 586E451C2ED8482400C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */;
 			productName = VizbeeHomeOSKit;
 		};
-		58DB2F7A2EC23DAB00F7FFA0 /* GoogleCast */ = {
+		586E45252ED854C100C8A6F4 /* GoogleCast */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 58DB2F732EC23AE400F7FFA0 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */;
+			package = 586E451D2ED8482B00C8A6F4 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */;
 			productName = GoogleCast;
 		};
 		58DB2F892EC2654A00F7FFA0 /* VizbeeTPlayKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 58DB2F882EC2652C00F7FFA0 /* XCLocalSwiftPackageReference "../../vizbee-tplay-sdk" */;
 			productName = VizbeeTPlayKit;
-		};
-		58DB302A2EC26D6900F7FFA0 /* VizbeeKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 58DB30292EC26D5B00F7FFA0 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */;
-			productName = VizbeeKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

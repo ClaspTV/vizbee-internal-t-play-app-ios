@@ -1,207 +1,269 @@
-# T-Mobile Play App
+# Vizbee T-Play iOS SDK Documentation
 
-A SwiftUI-based iOS application that displays a list of videos from various streaming providers (Plex, TBS, TNT) and integrates with the VizbeeTPlay SDK for casting functionality.
+This guide provides instructions for integrating the Vizbee T-Play SDK into your iOS application.
 
-## Features
+## Setup
 
-- **Video List Display**: Shows a scrollable list of movies and TV shows with thumbnails, titles, and provider information
-- **T-Mobile Branding**: Custom navigation bar with T-Mobile Play logo
-- **Cast Integration**: Cast button in the navigation bar using VizbeeTPlay SDK
-- **Video Playback**: Tap "Watch Free" to start video playback through VizbeeTPlay SDK
-- **Dark Theme**: Modern dark UI matching T-Mobile Play design
+### Swift Package Manager
 
-## Requirements
+The Vizbee T-Play SDK is distributed via Swift Package Manager.
 
-- iOS 16.0+
-- Xcode 15.0+
-- Swift 5.7+
-- VizbeeTPlay SDK (VizbeeKit framework)
+1.  In Xcode, go to **File > Add Packages...**
+2.  Add the following package repositories:
 
-## Setup Instructions
+    ```
+    https://github.com/ClaspTV/vizbee-tplay-sdk
+    https://github.com/ClaspTV/vizbee-ios-sdk
+    https://github.com/ClaspTV/vizbee-homeos-sdk
+    https://github.com/ClaspTV/google-cast-sdk-m1
+    ```
 
-### 1. Add VizbeeTPlay Framework
+3.  Set the dependency rules to the following versions (or later):
+    *   `VizbeeTPlayKit`: `1.0.0`
+    *   `VizbeeKit`: `6.8.4`
+    *   `VizbeeHomeOSKit`: `1.0.3`
+    *   `GoogleCastSDK`: `4.8.0`
 
-You need to add the VizbeeTPlay framework to your project:
+## Configuration
 
-1. Download or obtain the VizbeeTPlayKit.xcframework
-2. In Xcode, go to your target's **General** tab
-3. Under **Frameworks, Libraries, and Embedded Content**, click the **+** button
-4. Add the VizbeeKit.xcframework
-5. Make sure it's set to **Embed & Sign**
+### 1. Enable Multicast Networking
 
-### 2. Configure App ID
+To allow the SDK to discover devices on the local network, you must request and enable the Multicast Networking entitlement for your app.
 
-Open `AppDelegate.swift` and replace the placeholder with your actual Vizbee App ID:
+> Follow the instructions specified [here](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_networking_multicast) to use and verify the Multicast Networking Additional Capability.
 
-```swift
-// Replace with your actual Vizbee App ID
-let appId = "YOUR_VIZBEE_APP_ID"
-```
-
-Also configure the supported apps mapping:
-
-```swift
-options.supportedApps = [
-    "plex": "your_plex_tv_app_id",
-    "tbs": "your_tbs_tv_app_id",
-    "tnt": "your_tnt_tv_app_id"
-]
-```
-
-### 3. Add Required Permissions
-
-Add these keys to your `Info.plist`:
+In your app’s `.entitlements` file, add the `com.apple.developer.networking.multicast` key with a Boolean value of `true`:
 
 ```xml
-<key>NSLocalNetworkUsageDescription</key>
-<string>This app uses the local network to discover and connect to casting devices on your network.</string>
-
-<key>NSBonjourServices</key>
-<array>
-    <string>_vizbee._tcp</string>
-</array>
+<key>com.apple.developer.networking.multicast</key>
+<true/>
 ```
 
-## Project Structure
+### 2. Configure Info.plist for Network Access
 
-```
-TMobilePlayApp/
-├── TMobilePlayApp.swift          # Main app entry point
-├── AppDelegate.swift              # SDK initialization
-├── Models/
-│   └── Video.swift                # Video data model
-├── Data/
-│   └── VideoRepository.swift     # Video data source
-├── ViewModels/
-│   └── VideoListViewModel.swift  # Video list business logic
-├── Views/
-│   ├── ContentView.swift         # Main screen
-│   └── VideoRowView.swift        # Video item component
-└── Assets.xcassets/
-    └── t_mobile_play_logo.imageset/
-```
+To discover specific cast devices and explain local network usage to the user, add the following keys to your `Info.plist`:
 
-## How It Works
+*   **Bonjour Services (`NSBonjourServices`)**: This array declares the services your app will browse on the local network. Add the following strings to the array:
+    *   `_googlecast._tcp` : for finding Chromecast devices
+    *   `_viziocast._tcp` : for finding Vizio SmartCast devices
+    *   `_amzn-wplay._tcp` : for finding and installing apps on FireTV devices
 
-### SDK Initialization
+    ```xml
+    <key>NSBonjourServices</key>
+    <array>
+        <string>_googlecast._tcp</string>
+        <string>_viziocast._tcp</string>
+        <string>_amzn-wplay._tcp</string>
+    </array>
+    ```
 
-The VizbeeTPlay SDK is initialized in `AppDelegate.swift` when the app launches:
+*   **Local Network Usage Description (`NSLocalNetworkUsageDescription`)**: This message is shown to the user when your app first attempts to access the local network.
 
+    ```xml
+    <key>NSLocalNetworkUsageDescription</key>
+    <string>This app enables you to cast videos and automatically install and login to Roku, FireTV, SamsungTV and other streaming devices on your home network.</string>
+    ```
+
+## Integration Guide
+
+The Vizbee T-Play SDK enables video casting in your app through three simple integration steps.
+
+### Step 1: Initialize the SDK
+
+Initialize the SDK once at app startup, typically in your `App` struct or `AppDelegate`. This enables device discovery and establishes the casting environment.
+
+**Example:**
 ```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions...) -> Bool {
-    let appId = "YOUR_VIZBEE_APP_ID"
-    let options = VTPOptions()
-    options.debugMode = true
-    
-    VizbeeTPlay.initialize(appId: appId, options: options)
-    return true
+// In @main App struct
+import SwiftUI
+import VizbeeTPlayKit
+
+@main
+struct VizbeeInternalTPlayAppApp: App {
+
+    init() {
+        initVizbeeTPlay()
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+
+    private func initVizbeeTPlay() {
+        let appId = "vzb2379701350"
+        var options = VTPOptions()
+        // Apply a custom UI theme. See Step 4 for details.
+        options.uiConfiguration = TPlayStyle.darkTheme()
+        VizbeeTPlay.initialize(appId: appId, options: options)
+    }
 }
 ```
 
-### Video Playback
+### Step 2: Add Cast Button
 
-When a user taps "Watch Free", the app:
+Add the cast button to your UI. The button automatically updates its state to show casting availability and current connection status.
 
-1. Creates a `VTPVideoInfo` object with the video details
-2. Calls `VizbeeTPlay.shared.startVideo(in:videoInfo:)`
-3. The SDK handles device selection and playback
+**Add to SwiftUI Toolbar:**
+In your view's `.toolbar`, add the `VTPCastButton.SwiftUIView`.
 
 ```swift
+// In your SwiftUI View
+.toolbar {
+    ToolbarItem(placement: .navigationBarTrailing) {
+        VTPCastButton.SwiftUIView(size: CGSize(width: 24, height: 24))
+            .frame(width: 24, height: 24)
+    }
+}
+```
+> For a complete example, see the implementation in `VizbeeInternalTPlayApp/Views/ContentView.swift`.
+
+### Step 3: Start Video Playback
+
+Implement video casting by calling `startVideo()` when a user wants to watch content. This presents a device picker if not already connected and handles the entire casting flow.
+
+The `startVideo` function is an `async` method that returns a `VTPStartVideoResult`.
+
+```swift
+// In your ViewModel or wherever you handle user actions
+@MainActor
 func playVideo(_ video: Video, in viewController: UIViewController) {
-    let videoInfo = VTPVideoInfo(
-        tvDeepLinkUrl: video.id,
-        mobileDeepLinkUrl: video.id,
-        title: video.title,
-        subtitle: video.subtitle,
-        imageUrl: video.thumbnailUrl,
-        isLive: false
-    )
-    
-    let result = await VizbeeTPlay.shared.startVideo(
-        in: viewController,
-        videoInfo: videoInfo
-    )
+    Task {
+        // Create VTPVideoInfo from your video model
+        let videoInfo = VTPVideoInfo(
+            mobileDeepLinkUrl: video.mobileDeepLinkUrl,
+            tvDeepLinkUrl: video.tvDeepLinkUrl,
+            title: video.title,
+            subtitle: video.subtitle,
+            imageUrl: video.thumbnailUrl,
+            isLive: video.isLive
+        )
+
+        // Call VizbeeTPlay SDK to start video
+        let result = await VizbeeTPlay.shared.startVideo(
+            in: viewController,
+            videoInfo: videoInfo
+        )
+
+        // Handle the result
+        switch result {
+        case .success(let destination):
+            print("✅ Video playback started successfully on \\(destination)")
+            
+        case .failure(let error):
+            print("❌ Video playback failed: \\(error)")
+            // Optionally update UI to show an error
+            self.errorMessage = "Failed to start video: \\(error.localizedDescription)"
+        @unknown default:
+            break // Handle future cases
+        }
+    }
 }
 ```
+> For a complete example of how to manage state and call this method, see `VizbeeInternalTPlayApp/ViewModels/VideoListViewModel.swift`.
 
-### Cast Button
+### Step 4: [Optional] Customizing UI
 
-The cast button is displayed in the navigation bar using:
+You can customize the appearance of the Vizbee SDK's UI to match your app's branding.
+
+#### 1. Custom Cast Icons
+
+To use your own cast icons, add the images to your project's `Assets.xcassets` catalog. The SDK automatically uses icons with specific names to reflect the various connection states (e.g., disconnected, connecting, connected).
+
+> For a complete example of the required icon names and states, refer to the `Assets.xcassets` file in the `vizbee-internal-t-play-app-ios` sample project.
+
+#### 2. Custom Theme
+
+To customize the colors, fonts, and other visual elements of the Vizbee UI (like the device picker), copy the `TPlayStyle.swift` file from `VizbeeInternalTPlayApp/styles/TPlayStyle.swift` into your project. This file provides style dictionaries for dark and light themes that you can modify.
+
+Then, pass your style configuration when initializing the SDK, as shown in Step 1.
+
+
+## Analytics
+
+The T-Play SDK provides comprehensive analytics events to track the user journey. To receive these events, implement the `VTPAnalyticsListener` protocol and register your class as a listener.
+
+The sample app includes a singleton class, `AppAnalytics`, to demonstrate a clean and reusable way to handle these events. To integrate analytics:
+
+1.  Copy the `Analytics/AppAnalytics.swift` file into your project.
+2.  In your `App` initializer or `AppDelegate`, start the listener:
+
+    ```swift
+    AppAnalytics.shared.startListening()
+    ```
+
+### Example Implementation
+
+Here is the full implementation from `Analytics/AppAnalytics.swift`:
 
 ```swift
-ToolbarItem(placement: .navigationBarTrailing) {
-    VTPCastButton.SwiftUIView(size: CGSize(width: 24, height: 24))
+import Foundation
+import VizbeeTPlayKit
+import VizbeeHomeOSKit
+import os.log
+
+/// A singleton class to handle Vizbee T-Play analytics events.
+class AppAnalytics: VTPAnalyticsListener {
+
+    private static let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "AppAnalytics")
+
+    /// The shared singleton instance.
+    static let shared = AppAnalytics()
+
+    /// Private initializer to enforce the singleton pattern.
+    private init() {}
+
+    /// Registers this instance to start receiving analytics events.
+    func startListening() {
+        VizbeeTPlay.shared.analyticsManager.addListener(self)
+    }
+
+    /// Unregisters this instance to stop receiving analytics events.
+    func stopListening() {
+        VizbeeTPlay.shared.analyticsManager.removeListener(self)
+    }
+
+    // MARK: - VTPAnalyticsListener
+
+    func onEvent(_ event: VizbeeTPlayKit.VTPAnalyticsEvent) {
+        Self.logger.info("Analytics Event: \(event)")
+
+        switch event {
+        case .deviceSelectionDialogShown(let devices):
+            Self.logger.info("Device selection dialog shown with \(devices.count) devices.")
+
+        case .deviceSelectionDialogUpdated(let updatedDevices):
+            Self.logger.info("Device selection dialog updated with \(updatedDevices.count) devices.")
+
+        case .deviceSelectionDialogDismissed:
+            Self.logger.info("Device selection dialog dismissed.")
+
+        case .tvSelected(let device):
+            Self.logger.info("User selected TV: \(device.friendlyName)")
+
+        case .mobileSelected:
+            Self.logger.info("User selected to watch on mobile.")
+
+        case .tvConnecting(let device):
+            Self.logger.info("Connecting to TV: \(device.friendlyName)")
+
+        case .tvConnected(let device):
+            Self.logger.info("Connected to TV: \(device.friendlyName)")
+
+        case .tvConnectionFailed(let device, let error):
+            Self.logger.error("Failed to connect to TV: \(device.friendlyName). Error: \(error ?? "Unknown")")
+
+        case .tvDisconnected(let device, let reason):
+            Self.logger.info("Disconnected from TV: \(device.friendlyName). Reason: \(reason ?? "Unknown")")
+
+        case .videoStateChanged(let title, _, let state, let position, _, _):
+            Self.logger.info("Video \'\(title)\' state changed to \(state) at position \(position)")
+
+        default:
+            // This handles any future event types gracefully.
+            break
+        }
+    }
 }
 ```
-
-## Video Data
-
-Videos are stored in `VideoRepository.swift` and include content from:
-- **Plex**: Movies and TV shows
-- **TBS**: TV shows and movies
-- **TNT**: TV shows and movies
-
-Each video includes:
-- Deep link URL (used as ID)
-- Title
-- Subtitle (provider and content type)
-- Thumbnail URL
-- Content type (movie or TV show)
-
-## Customization
-
-### UI Configuration
-
-You can customize the VizbeeTPlay UI in `AppDelegate.swift`:
-
-```swift
-let uiConfig = VZBUIConfig()
-// Customize colors, fonts, etc.
-options.uiConfiguration = uiConfig
-```
-
-### Video List
-
-To add or modify videos, edit `VideoRepository.swift`:
-
-```swift
-Video(
-    id: "https://your-deep-link-url",
-    title: "Your Video Title",
-    subtitle: "Provider • Type",
-    thumbnailUrl: "https://thumbnail-url",
-    contentType: .movie
-)
-```
-
-### Styling
-
-Colors and styling can be adjusted in:
-- `VideoRowView.swift`: Video item styling
-- `ContentView.swift`: Main screen layout and colors
-
-## Troubleshooting
-
-### Cast Button Not Appearing
-- Ensure VizbeeKit framework is properly linked
-- Check that SDK initialization completes successfully
-- Verify network permissions in Info.plist
-
-### Video Playback Fails
-- Verify your Vizbee App ID is correct
-- Check that deep link URLs are valid
-- Ensure device discovery is working
-
-### Debug Logging
-Enable debug mode in AppDelegate:
-```swift
-options.debugMode = true
-```
-
-## Support
-
-For VizbeeTPlay SDK issues, refer to the Vizbee documentation or contact Vizbee support.
-
-## License
-
-Copyright © Vizbee. All rights reserved.

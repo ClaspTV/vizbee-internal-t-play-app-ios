@@ -18,6 +18,8 @@ struct VizbeeInternalTPlayApp: App {
             let names = UIFont.fontNames(forFamilyName: family)
             print("Family: \(family) Font names: \(names)")
         }
+        
+        AppAnalytics.shared.startListening()
     }
     
     var body: some Scene {
