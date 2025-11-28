@@ -639,7 +639,7 @@
 			repositoryURL = "https://github.com/ClaspTV/vizbee-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.8.4;
+				minimumVersion = 6.8.5;
 			};
 		};
 		586E451C2ED8482400C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */ = {
@@ -663,7 +663,7 @@
 			repositoryURL = "https://github.com/ClaspTV/vizbee-tplay-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -20,7 +20,7 @@ The Vizbee T-Play SDK is distributed via Swift Package Manager.
 
 3.  Set the dependency rules to the following versions (or later):
     *   `VizbeeTPlayKit`: `1.0.0`
-    *   `VizbeeKit`: `6.8.4`
+    *   `VizbeeKit`: `6.8.5`
     *   `VizbeeHomeOSKit`: `1.0.3`
     *   `GoogleCastSDK`: `4.8.0`
 

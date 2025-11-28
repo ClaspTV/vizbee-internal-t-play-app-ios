@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ClaspTV/vizbee-ios-sdk",
       "state" : {
-        "revision" : "9c3241c8086d8ad059397da6829eff99a7975f29",
-        "version" : "6.8.4"
+        "revision" : "e1d635a9047d07181bba913b9b8ed2cf05788bdd",
+        "version" : "6.8.5"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ClaspTV/vizbee-tplay-sdk",
       "state" : {
-        "revision" : "302981bede0a1d6d3e8739796d35c76bd876b88b",
-        "version" : "0.0.2"
+        "revision" : "7c8d41a5a4adeab83a9ccc452c24477d98036196",
+        "version" : "1.0.0"
       }
     }
   ],
