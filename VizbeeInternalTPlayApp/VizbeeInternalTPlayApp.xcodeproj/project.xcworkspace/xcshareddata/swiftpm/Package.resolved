@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ClaspTV/vizbee-tplay-sdk",
       "state" : {
-        "revision" : "eb413fb1c6f31ffa522f0e24cb1b22b3381a4771",
-        "version" : "0.0.1"
+        "revision" : "302981bede0a1d6d3e8739796d35c76bd876b88b",
+        "version" : "0.0.2"
       }
     }
   ],
