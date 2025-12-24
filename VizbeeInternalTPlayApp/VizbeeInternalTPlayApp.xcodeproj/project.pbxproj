@@ -10,7 +10,7 @@
 		586E45222ED854C100C8A6F4 /* VizbeeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45212ED854C100C8A6F4 /* VizbeeKit */; };
 		586E45242ED854C100C8A6F4 /* VizbeeHomeOSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45232ED854C100C8A6F4 /* VizbeeHomeOSKit */; };
 		586E45262ED854C100C8A6F4 /* GoogleCast in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45252ED854C100C8A6F4 /* GoogleCast */; };
-		586E45292ED869F100C8A6F4 /* VizbeeTPlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 586E45282ED869F100C8A6F4 /* VizbeeTPlayKit */; };
+		58C3D7942EFBEC6E00B35DFF /* VizbeeTPlayKit in Frameworks */ = {isa = PBXBuildFile; productRef = 58C3D7932EFBEC6E00B35DFF /* VizbeeTPlayKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				586E45222ED854C100C8A6F4 /* VizbeeKit in Frameworks */,
-				586E45292ED869F100C8A6F4 /* VizbeeTPlayKit in Frameworks */,
+				58C3D7942EFBEC6E00B35DFF /* VizbeeTPlayKit in Frameworks */,
 				586E45242ED854C100C8A6F4 /* VizbeeHomeOSKit in Frameworks */,
 				586E45262ED854C100C8A6F4 /* GoogleCast in Frameworks */,
 			);
@@ -147,7 +147,7 @@
 				586E45212ED854C100C8A6F4 /* VizbeeKit */,
 				586E45232ED854C100C8A6F4 /* VizbeeHomeOSKit */,
 				586E45252ED854C100C8A6F4 /* GoogleCast */,
-				586E45282ED869F100C8A6F4 /* VizbeeTPlayKit */,
+				58C3D7932EFBEC6E00B35DFF /* VizbeeTPlayKit */,
 			);
 			productName = VizbeeInternalTPlayApp;
 			productReference = 58DB2F2D2EC2263900F7FFA0 /* VizbeeInternalTPlayApp.app */;
@@ -235,7 +235,7 @@
 				586E451B2ED847D700C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */,
 				586E451C2ED8482400C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */,
 				586E451D2ED8482B00C8A6F4 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */,
-				586E45272ED869E200C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-tplay-sdk" */,
+				584A56092EDB096F000442F9 /* XCRemoteSwiftPackageReference "vizbee-tplay-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 58DB2F2E2EC2263900F7FFA0 /* Products */;
@@ -465,7 +465,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -503,7 +503,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -634,6 +634,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		584A56092EDB096F000442F9 /* XCRemoteSwiftPackageReference "vizbee-tplay-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/vizbee-tplay-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		586E451B2ED847D700C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ClaspTV/vizbee-ios-sdk";
@@ -658,14 +666,6 @@
 				minimumVersion = 4.8.0;
 			};
 		};
-		586E45272ED869E200C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-tplay-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ClaspTV/vizbee-tplay-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -684,9 +684,9 @@
 			package = 586E451D2ED8482B00C8A6F4 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */;
 			productName = GoogleCast;
 		};
-		586E45282ED869F100C8A6F4 /* VizbeeTPlayKit */ = {
+		58C3D7932EFBEC6E00B35DFF /* VizbeeTPlayKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 586E45272ED869E200C8A6F4 /* XCRemoteSwiftPackageReference "vizbee-tplay-sdk" */;
+			package = 584A56092EDB096F000442F9 /* XCRemoteSwiftPackageReference "vizbee-tplay-sdk" */;
 			productName = VizbeeTPlayKit;
 		};
 /* End XCSwiftPackageProductDependency section */

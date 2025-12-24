@@ -7,6 +7,7 @@
 
 import SwiftUI
 import VizbeeTPlayKit
+import VizbeeKit
 
 @main
 struct VizbeeInternalTPlayApp: App {
@@ -34,6 +35,8 @@ struct VizbeeInternalTPlayApp: App {
         options.uiConfiguration = TPlayStyle.darkTheme()
         options.debugMode = true
         VizbeeTPlay.initialize(appId: appId, options: options)
+        // Pass the T-Mobile subscriber ID at the earliest possible point in the app lifecycle, whenever it becomes available.”
+        Vizbee.addCustomEventAttributes(["TMobile_SubscriberId": "<TMobile_SubscriberId>"])
         print("✅ SDK initialized in App.init()")
     }
 }
