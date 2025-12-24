@@ -1,6 +1,6 @@
 # Vizbee T-Play iOS SDK Documentation
 
-This guide provides instructions for integrating the Vizbee T-Play SDK into your iOS application.
+This guide provides instructions for integrating the Vizbee T-Play SDK into TPlay iOS application.
 
 ## Setup
 
@@ -28,11 +28,11 @@ The Vizbee T-Play SDK is distributed via Swift Package Manager.
 
 ### 1. Enable Multicast Networking
 
-To allow the SDK to discover devices on the local network, you must request and enable the Multicast Networking entitlement for your app.
+To allow the SDK to discover devices on the local network, you must request and enable the Multicast Networking entitlement for the TPlay iOS app.
 
 > Follow the instructions specified [here](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_networking_multicast) to use and verify the Multicast Networking Additional Capability.
 
-In your app’s `.entitlements` file, add the `com.apple.developer.networking.multicast` key with a Boolean value of `true`:
+In the app’s `.entitlements` file, add the `com.apple.developer.networking.multicast` key with a Boolean value of `true`:
 
 ```xml
 <key>com.apple.developer.networking.multicast</key>
@@ -41,9 +41,9 @@ In your app’s `.entitlements` file, add the `com.apple.developer.networking.mu
 
 ### 2. Configure Info.plist for Network Access
 
-To discover specific cast devices and explain local network usage to the user, add the following keys to your `Info.plist`:
+To discover specific cast devices and explain local network usage to the user, add the following keys to the app's `Info.plist`:
 
-*   **Bonjour Services (`NSBonjourServices`)**: This array declares the services your app will browse on the local network. Add the following strings to the array:
+*   **Bonjour Services (`NSBonjourServices`)**: This array declares the services the app will browse on the local network. Add the following strings to the array:
     *   `_googlecast._tcp` : for finding Chromecast devices
     *   `_viziocast._tcp` : for finding Vizio SmartCast devices
     *   `_amzn-wplay._tcp` : for finding and installing apps on FireTV devices
@@ -57,20 +57,20 @@ To discover specific cast devices and explain local network usage to the user, a
     </array>
     ```
 
-*   **Local Network Usage Description (`NSLocalNetworkUsageDescription`)**: This message is shown to the user when your app first attempts to access the local network.
+*   **Local Network Usage Description (`NSLocalNetworkUsageDescription`)**: This message is shown to the user when the app first attempts to access the local network.
 
     ```xml
     <key>NSLocalNetworkUsageDescription</key>
-    <string>This app enables you to cast videos and automatically install and login to Roku, FireTV, SamsungTV and other streaming devices on your home network.</string>
+    <string>This app enables you to cast videos and automatically install and log in to Roku, FireTV, SamsungTV, and other streaming devices on home network.</string>
     ```
 
 ## Integration Guide
 
-The Vizbee T-Play SDK enables video casting in your app through three simple integration steps.
+The Vizbee T-Play SDK enables video casting in the T-Play iOS app through three simple integration steps.
 
 ### Step 1: Initialize the SDK
 
-Initialize the SDK once at app startup, typically in your `App` struct or `AppDelegate`. This enables device discovery and establishes the casting environment.
+Initialize the SDK once at app startup, typically in the `App` struct or `AppDelegate`. This enables device discovery and establishes the casting environment.
 
 **Example:**
 ```swift
@@ -103,13 +103,13 @@ struct VizbeeInternalTPlayAppApp: App {
 
 ### Step 2: Add Cast Button
 
-Add the cast button to your UI. The button automatically updates its state to show casting availability and current connection status.
+Add the cast button to the app's UI. The button automatically updates its state to show casting availability and current connection status.
 
 **Add to SwiftUI Toolbar:**
-In your view's `.toolbar`, add the `VTPCastButton.SwiftUIView`.
+In the app view's `.toolbar`, add the `VTPCastButton.SwiftUIView`.
 
 ```swift
-// In your SwiftUI View
+// In SwiftUI View
 .toolbar {
     ToolbarItem(placement: .navigationBarTrailing) {
         VTPCastButton.SwiftUIView(size: CGSize(width: 24, height: 24))
@@ -126,11 +126,11 @@ Implement video casting by calling `startVideo()` when a user wants to watch con
 The `startVideo` function is an `async` method that returns a `VTPStartVideoResult`.
 
 ```swift
-// In your ViewModel or wherever you handle user actions
+// In ViewModel or wherever you handle user actions
 @MainActor
 func playVideo(_ video: Video, in viewController: UIViewController) {
     Task {
-        // Create VTPVideoInfo from your video model
+        // Create VTPVideoInfo from the app's video model
         let videoInfo = VTPVideoInfo(
             mobileDeepLinkUrl: video.mobileDeepLinkUrl,
             tvDeepLinkUrl: video.tvDeepLinkUrl,
@@ -165,29 +165,29 @@ func playVideo(_ video: Video, in viewController: UIViewController) {
 
 ### Step 4: [Optional] Customizing UI
 
-You can customize the appearance of the Vizbee SDK's UI to match your app's branding.
+You can customize the appearance of the Vizbee SDK's UI to match the TPlay app's branding.
 
 #### 1. Custom Cast Icons
 
-To use your own cast icons, add the images to your project's `Assets.xcassets` catalog. The SDK automatically uses icons with specific names to reflect the various connection states (e.g., disconnected, connecting, connected).
+To use the app's own cast icons, add the images to the app's project's `Assets.xcassets` catalog. The SDK automatically uses icons with specific names to reflect the various connection states (e.g., disconnected, connecting, connected).
 
 > For a complete example of the required icon names and states, refer to the `Assets.xcassets` file in the `vizbee-internal-t-play-app-ios` sample project.
 
 #### 2. Custom Theme
 
-To customize the colors, fonts, and other visual elements of the Vizbee UI (like the device picker), copy the `TPlayStyle.swift` file from `VizbeeInternalTPlayApp/styles/TPlayStyle.swift` into your project. This file provides style dictionaries for dark and light themes that you can modify.
+To customize the colors, fonts, and other visual elements of the Vizbee UI (like the device picker), copy the `TPlayStyle.swift` file from `VizbeeInternalTPlayApp/styles/TPlayStyle.swift` into the app's project. This file provides style dictionaries for dark and light themes that you can modify.
 
-Then, pass your style configuration when initializing the SDK, as shown in Step 1.
+Then, pass the app's style configuration when initializing the SDK, as shown in Step 1.
 
 
 ## Analytics
 
-The T-Play SDK provides comprehensive analytics events to track the user journey. To receive these events, implement the `VTPAnalyticsListener` protocol and register your class as a listener.
+The T-Play SDK provides comprehensive analytics events to track the user journey. To receive these events, implement the `VTPAnalyticsListener` protocol and register the app's class as a listener.
 
 The sample app includes a singleton class, `AppAnalytics`, to demonstrate a clean and reusable way to handle these events. To integrate analytics:
 
-1.  Copy the `Analytics/AppAnalytics.swift` file into your project.
-2.  In your `App` initializer or `AppDelegate`, start the listener:
+1.  Copy the `Analytics/AppAnalytics.swift` file into the project.
+2.  In the `App` initializer or `AppDelegate`, start the listener:
 
     ```swift
     AppAnalytics.shared.startListening()
